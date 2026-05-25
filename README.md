@@ -92,8 +92,6 @@ Fully connected layers predict normalized bone age values.
 
 # Dataset
 
-* **RSNA 2017 Pediatric Bone Age Dataset**
-
 [RSNA Dataset](https://www.kaggle.com/datasets/kmader/rsna-bone-age?select=boneage-training-dataset.csv)
 
 
