@@ -8,21 +8,15 @@ The system predicts skeletal age in **months** through a multimodal ensemble CNN
 
 ## Preprocessing Pipeline
 
-```md
 ![Preprocessing](assets/Preprocessing.png)
-```
 
 ## Scatter Plot Results
 
-```md
 ![Scatter Plot](assets/Scatter_Plot.png)
-```
 
 ## Residual Plot
 
-```md
 ![Residual Plot](assets/Residual_Plot.png)
-```
 
 # System Pipeline
 
@@ -56,30 +50,30 @@ Pixel values normalized from `[0,255] → [0,1]`.
 Grayscale images are converted into pseudo-RGB format for compatibility with pretrained CNNs.
 
 
-# Model Architecture
+## 2. Model Architecture
 
 The system uses a **multimodal ensemble CNN architecture** composed of:
 
-## InceptionV3 Backbone
+### InceptionV3 Backbone
 
 * Pretrained on ImageNet
 * Fully fine-tuned
 * Extracts multi-scale spatial features
 
-## ResNet50 Backbone
+### ResNet50 Backbone
 
 * Pretrained on ImageNet
 * Extracts deep residual features
 
-## Feature Fusion
+### Feature Fusion
 
 Outputs from both networks are concatenated into a unified visual feature vector.
 
-## Gender Embedding Branch
+### Gender Embedding Branch
 
 A learnable embedding layer processes gender information to capture gender-specific growth patterns.
 
-## Regression Head
+### Regression Head
 
 Fully connected layers predict normalized bone age values.
 
@@ -96,15 +90,14 @@ Fully connected layers predict normalized bone age values.
 | Accuracy Within 2 Years | 95.45%       |
 
 
-#  Dataset
+# Dataset
 
 * **RSNA 2017 Pediatric Bone Age Dataset**
 
-```md
 [RSNA Dataset](https://www.kaggle.com/datasets/kmader/rsna-bone-age?select=boneage-training-dataset.csv)
-```
 
-# 🛠 Technologies Used
+
+# Technologies Used
 
 * TensorFlow / Keras
 * Python
